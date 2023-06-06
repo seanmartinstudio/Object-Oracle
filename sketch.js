@@ -1,6 +1,8 @@
 let mobilenet
 let video
 let label = ''
+let confidence = ''
+let percent
 
 const modelReady = () => {
   console.log("Model is ready!!!")
@@ -14,24 +16,25 @@ const gotResults = (error, results) => {
     console.log(results)
   }
   label = results[0].label
+  percent = results[0].confidence
   mobilenet.predict(gotResults)
 }
 
 function setup() {
   createCanvas(840, 680)
-  background(0)
   video = createCapture(VIDEO)
   video.hide()
-  // console.log("Video, ", video)
-  // video.position(windowWidth * .3, windowHeight/5)
+  background(0)
   mobilenet = ml5.imageClassifier('MobileNet', video, modelReady)
 }
 
 function draw() {
+  background(255)
   image(video, 100, 100)
-  // fill(0)
-  // textSize(32)
-  // text(label, 10, height - 100)
+  fill(0)
+  textSize(32)
+  text(label, width/4, height - 30)
+  // text(percent, width/4, height)
 }
 
 
