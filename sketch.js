@@ -18,7 +18,7 @@ const gotResults = (error, results) => {
 }
 
 function setup() {
-  createCanvas(740, 580)
+  createCanvas(840, 680)
   background(0)
   video = createCapture(VIDEO)
   video.hide()
@@ -28,7 +28,7 @@ function setup() {
 }
 
 function draw() {
-  // image(video)
+  image(video, 100, 100)
   // fill(0)
   // textSize(32)
   // text(label, 10, height - 100)
