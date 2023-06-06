@@ -26,8 +26,8 @@ const imageReady = () => image(parrot, 0, 0, width, height)
 function setup() {
   createCanvas(640, 480);
 
-  //Creates DOM element of img
-  parrot = createImg("/Rose_Ringed_Parrot.jpg", imageReady)
+  //Creates webcame view
+  parrot = createCapture(VIDEO)
   parrot.hide()
   background(0)
   mobilenet = ml5.imageClassifier('MobileNet', modelReady)
