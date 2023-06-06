@@ -16,8 +16,6 @@ const gotResults = (error, results) => {
   let probability = results[0].confidence
   fill(0)
   textSize(64)
-  text(label, 20, 80)
-  text(label)
   createP(label)
   createP(probability)
 }
