@@ -1,7 +1,27 @@
 let mobilenet
 let parrot
 
-const modelReady = () => console.log("Model is ready!")
+const modelReady = () => {
+  console.log("Model is ready!")
+  mobilenet.predict(parrot, gotResults)
+}
+
+const gotResults = (error, results) => {
+  if(error) {
+    console.error(error)
+  } else {
+    console.log(results)
+  }
+  let label = results[0].label
+  let probability = results[0].confidence
+  fill(0)
+  textSize(64)
+  text(label, 20, 80)
+  text(label)
+  createP(label)
+  createP(probability)
+}
+
 
 const imageReady = () => image(parrot, 0, 0, width, height)
 
