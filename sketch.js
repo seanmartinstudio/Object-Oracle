@@ -38,5 +38,14 @@ function draw() {
 }
 
 
+//To Do
+//Make a button to save screen shot image(lower right side)
+//Make h1 in top left corner, same font as Lakers Stats
+//Make Lakers font global
+//Center video window
+//Create UI wait card while model is being called
+//Add icon and link to my github
+
+
 //Have video on center of screen but not in canvas
 //Have canvas size of screen and have the labels writing at all times
