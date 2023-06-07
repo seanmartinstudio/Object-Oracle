@@ -45,6 +45,7 @@ function draw() {
 //Center video window
 //Create UI wait card while model is being called
 //Add icon and link to my github
+//Query GPT for web app title
 
 
 //Have video on center of screen but not in canvas
