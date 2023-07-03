@@ -1,8 +1,8 @@
 let mobilenet
+let myFont
 let video
+let canvas
 let label = ''
-let confidence = ''
-let percent
 
 const modelReady = () => {
   console.log("Model is ready!!!")
@@ -20,8 +20,12 @@ const gotResults = (error, results) => {
   mobilenet.predict(gotResults)
 }
 
+function preload() {
+  myFont = loadFont('/fonts/Roboto-Medium.ttf');
+}
+
 function setup() {
-  createCanvas(840, 680)
+  canvas = createCanvas(windowWidth, windowHeight)
   video = createCapture(VIDEO)
   video.hide()
   background(0)
@@ -30,12 +34,14 @@ function setup() {
 
 function draw() {
   background(255)
-  image(video, 100, 100)
+  image(video, windowWidth/2 - 320, windowHeight/2 - 400)
   fill(0)
+  textFont(myFont)
   textSize(32)
-  text(label, width/4, height - 30)
-  // text(percent, width/4, height)
+  text(label, windowWidth/2 - 320, windowHeight/2 + 125)
 }
+
+
 
 
 //To Do
