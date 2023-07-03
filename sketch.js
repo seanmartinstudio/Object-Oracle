@@ -1,3 +1,5 @@
+console.log("%c \n© Sean Martin 2023\n", "color: grey")
+
 let mobilenet
 let myFont
 let video
