@@ -7,7 +7,7 @@ let canvas
 let label = ''
 
 const modelReady = () => {
-  console.log("Model is ready!!!")
+  // console.log("Model is ready!")
   mobilenet.predict(gotResults)
 }
 
