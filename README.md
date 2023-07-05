@@ -1,8 +1,5 @@
-# ml5js-practice
+# [Object Oracle 💻](https://object-oracle.netlify.app/)
 
-## Title Ideas:
-* ObjectOracle: Observing, Identifying, and Informing through your Webcam
-* Image Interpreter: Instantaneous Insight into Imagery via Webcam
+#### Object identification web app using the computer's webcam. Prediction pulled from the [ml5js.org](https://ml5js.org/) API and pre-trained MobileNet model. Fire up the site and let the computer be your oracle!
 
-## Hello World
-
+[Link to web app!](https://object-oracle.netlify.app/)
